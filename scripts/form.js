@@ -391,7 +391,7 @@ document.getElementById('codes').addEventListener('submit', (ev) => {
    // Create a new ZIP file
    const zip = new JSZip();
    blobs.forEach((blob, i) => {
-    zip.file(`ESW1A_RA${ra.split('-')[0].substring(0, 6)}_EX${formatNumber(i)}.c`, blob);
+    zip.file(`ESW1A_RA${ra.split('-')[0].substring(0, 6)}_EX${formatNumber(i+1)}.c`, blob);
    })
  
    // Generate the ZIP file contents
