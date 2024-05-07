@@ -4,7 +4,7 @@ function formatNumber(num) {
 
 const codes = (name, email) => `
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date......: 05-07-2024
 OB..........: Calcula o desconto do INSS com base no salário do funcionário.
 */
@@ -34,7 +34,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Verifica se os números digitados pelo usuário são divisíveis por 2 ou 3.
 */
@@ -64,7 +64,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Calcula o prêmio de Natal com base no número de horas extras e faltas de um funcionário.
 */
@@ -102,7 +102,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Calcula a gratificação de um funcionário com base na quantidade de peças vendidas.
 */
@@ -140,7 +140,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Calcula o desconto na mensalidade do clube com base no sexo e idade do associado.
 */
@@ -184,7 +184,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Verifica se um número inteiro digitado pelo usuário é par ou ímpar.
 */
@@ -207,7 +207,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Ordena três números inteiros digitados pelo usuário em ordem crescente.
 */
@@ -247,7 +247,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Calcula o salário líquido de um funcionário, considerando o salário bruto, prêmio, e descontos do INSS e IR.
 */
@@ -308,7 +308,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Identifica se um número inteiro positivo digitado pelo usuário é par, ímpar e/ou múltiplo de 3, 5 ou 7.
 */
@@ -344,7 +344,7 @@ int main() {
 }
 --------------------------------------------------------------------------------
 /*
-Author..: ${name.toUpperCase} <${email}>
+Author..: ${name.toUpperCase()} <${email}>
 Date....: 05-07-2024
 OB......: Verifica se um aluno foi aprovado ou reprovado com base em suas quatro notas.
 */
@@ -391,7 +391,7 @@ document.getElementById('codes').addEventListener('submit', (ev) => {
    // Create a new ZIP file
    const zip = new JSZip();
    blobs.forEach((blob, i) => {
-    zip.file(`ESW1A_RA${ra.split('-')[0].substring(0, 6)}_EX${formatNumber(i)}.txt`, blob);
+    zip.file(`ESW1A_RA${ra.split('-')[0].substring(0, 6)}_EX${formatNumber(i)}.c`, blob);
    })
  
    // Generate the ZIP file contents
@@ -402,7 +402,7 @@ document.getElementById('codes').addEventListener('submit', (ev) => {
        // Create a new anchor element
        const a = document.createElement("a");
        a.href = url;
-       a.download = "test.zip"; // Set the download file name
+       a.download = "codes.zip"; // Set the download file name
  
        // Append the anchor element to the document body
        document.body.appendChild(a);
