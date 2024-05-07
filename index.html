@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/form.css" />
 
-    <title>Authentication | Sign Up</title>
+    <title>Codes of Week</title>
   </head>
 
   <body>
@@ -20,51 +20,100 @@
     <div class="glare"></div>
 
     <main>
-      <form class="form" id="signup">
-        <h1>Sign Up</h1>
+      <form class="form" id="codes">
+        <h1>Codes of Week (IF ELSE)</h1>
         <p>
-          Enter your credentials below to create your account. Already have a
-          account? <a href="#">Enter on my account</a>.
+          Enter your credentials below to generate the header for the code of week.
         </p>
 
+        <!-- <div class="input-wrapper">
+          <label for="name" class="input-label">Full Name*</label>
+
+          <div id="select" class="select">
+            <div class="select-trigger" onclick="opencloseselect()">
+              <span class="placeholder">Select Your Class</span>
+            </div>
+
+            <ul id="select-content" class="select-content">
+              <li data-value="ESW" onclick="setselectopt()">ESW</li>
+              <li data-value="ESW1A" onclick="setselectopt()">ESW 1ºA</li>
+              <li data-value="ESW1B" onclick="setselectopt()">ESW 1ºB</li>
+              <li data-value="ADS" onclick="setselectopt()">ADS</li>
+              <li data-value="ADS1A" onclick="setselectopt()">ADS 1ºA</li>
+              <li data-value="ADS1B" onclick="setselectopt()">ADS 1ºB</li>
+            </ul>
+          </div>
+          <select
+            name="name"
+            id="name"
+            required
+            aria-hidden="true"
+            onfocus="opencloseselect()"
+          >
+            <option value="" disabled selected></option>
+            <option value="ESW">ESW</option>
+            <option value="ESW1A">ESW 1ºA</option>
+            <option value="ESW1B">ESW 1ºB</option>
+            <option value="ADS">ADS</option>
+            <option value="ADS1A">ADS 1ºA</option>
+            <option value="ADS1B">ADS 1ºB</option>
+          </select>
+        </div> -->
+
         <div class="input-wrapper">
-          <label class="input-label">Name*</label>
+          <label for="name" class="input-label">Full Name*</label>
           <input
             type="name"
             name="name"
             id="name"
-            placeholder="Gildo"
+            placeholder="Ruds da Silva"
             required
           />
         </div>
         <div class="input-wrapper">
-          <label class="input-label">E-Mail*</label>
+          <label for="email" class="input-label">E-Mail*</label>
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="prof_gildo@unicv.edu.br"
+            placeholder="ruds@example.com"
             required
           />
         </div>
         <div class="input-wrapper">
-          <label class="input-label">Password*</label>
+          <label for="ra" class="input-label">Academic Registry (RA)*</label>
           <input
-            type="password"
-            name="password"
+            type="number"
+            name="ra"
             minlength="6"
-            id="password"
+            id="ra"
             placeholder="*****"
             required
           />
         </div>
 
-        <button>Create Account</button>
+        <button>Download .zip File</button>
       </form>
     </main>
 
     <footer>&copy; Copyright 2024</footer>
 
+    <script>
+      function opencloseselect() {
+        const select = document.getElementById('select').getAttribute('data-open');
+        console.log(select)
+
+        if (true) {
+          document.getElementById('select-content').style.display = 'flex';
+          document.getElementById('select').setAttribute('data-open', 'true');
+          return
+        }
+
+        document.getElementById('select').setAttribute('data-open', 'true');
+        document.getElementById('select-content').style.display = 'flex';
+      }
+    </script>
     <script src="./scripts/form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3/dist/jszip.min.js"></script>
   </body>
 </html>

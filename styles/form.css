@@ -52,3 +52,61 @@
   color: var(--foreground);
   opacity: 60%;
 }
+
+.input-wrapper .select-trigger {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  color: rgb(var(--foreground));
+  cursor: pointer;
+
+  border: 1px solid rgba(var(--foreground), .3);
+}
+
+.input-wrapper .select-trigger:focus {
+  border: 1px solid rgb(var(--primary));
+  box-shadow: 0 0 0 4px var(--background), 0 0 0 6px rgb(var(--primary), 0.2);
+}
+
+.input-wrapper .select-trigger .placeholder {
+  color: var(--foreground);
+  opacity: 60%;
+}
+
+.select {
+  position: relative;
+}
+
+.select .select-content li {
+  color: rgb(var(--foreground));
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+}
+
+.select .select-content li:hover {
+  background: rgb(var(--primary), 0.1);
+}
+
+.select-content {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgb(var(--primary));
+  border-top: none;
+  z-index: 10;
+}
+
+select {
+  position: absolute;
+  opacity: 0;
+}
