@@ -112,6 +112,15 @@ a:hover {
   text-decoration: underline;
 }
 
+.title {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.title span {
+  color: rgb(var(--primary));
+}
+
 @keyframes glare {
   0% {
     rotate: 0deg;

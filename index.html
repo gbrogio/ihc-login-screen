@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <img src="./assets/logo.svg" alt="Rantagy" />
+      <h1 class="title">R<span>ANTA</span>GGY</h1>
     </header>
 
     <div class="glare"></div>
@@ -87,7 +87,7 @@
             name="ra"
             minlength="6"
             id="ra"
-            placeholder="*****"
+            placeholder="123456"
             required
           />
         </div>
@@ -102,10 +102,9 @@
       function opencloseselect() {
         const select = document.getElementById('select').getAttribute('data-open');
         console.log(select)
-
-        if (true) {
-          document.getElementById('select-content').style.display = 'flex';
-          document.getElementById('select').setAttribute('data-open', 'true');
+        if (select === 'true') {
+          document.getElementById('select-content').style.display = 'hidden';
+          document.getElementById('select').setAttribute('data-open', 'false');
           return
         }
 
